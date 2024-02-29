@@ -8,8 +8,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-     initialRoute: RouteName.dashboard,
-     onGenerateRoute: Routes.genrateRoute,
+      theme: ThemeData(colorScheme: ColorScheme.light()),
+      debugShowCheckedModeBanner: false,
+      initialRoute: RouteName.onBoard,
+      onGenerateRoute: Routes.genrateRoute,
     );
   }
 }

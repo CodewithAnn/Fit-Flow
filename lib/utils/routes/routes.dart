@@ -1,4 +1,5 @@
 import 'package:fitflow/pages/dashboard_page.dart';
+import 'package:fitflow/pages/on_Boarding.dart';
 import 'package:fitflow/utils/routes/routes_Name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -9,6 +10,10 @@ class Routes {
       case RouteName.dashboard:
         return MaterialPageRoute(
           builder: (context) => const DashBoardPage(),
+        );
+      case RouteName.onBoard:
+        return MaterialPageRoute(
+          builder: (context) => const OnBoardingPage(),
         );
 
       default:
