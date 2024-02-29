@@ -1,3 +1,5 @@
+import 'package:fitflow/utils/routes/routes.dart';
+import 'package:fitflow/utils/routes/routes_Name.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -6,7 +8,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(),
+     initialRoute: RouteName.dashboard,
+     onGenerateRoute: Routes.genrateRoute,
     );
   }
 }
