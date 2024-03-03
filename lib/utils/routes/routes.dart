@@ -1,6 +1,7 @@
 import 'package:fitflow/pages/about_page.dart';
 import 'package:fitflow/pages/age_page.dart';
 import 'package:fitflow/pages/dashboard_page.dart';
+import 'package:fitflow/pages/goals_page.dart';
 import 'package:fitflow/pages/on_Boarding.dart';
 import 'package:fitflow/pages/weight_page.dart';
 import 'package:fitflow/utils/routes/routes_Name.dart';
@@ -29,6 +30,10 @@ class Routes {
       case RouteName.weight:
         return MaterialPageRoute(
           builder: (context) => const WeightPage(),
+        );
+      case RouteName.goals:
+        return MaterialPageRoute(
+          builder: (context) => const GoalsPage(),
         );
 
       default:
