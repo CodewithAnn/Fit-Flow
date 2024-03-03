@@ -15,5 +15,10 @@ class Constant {
   static const prefUsername = "fitflow_username";
   static const prefWorkouts = "fitflow_workouts";
   static const prefNotification = "fitflow_notification";
+}
 
+class AppColor {
+  static const Color primaryColor = Color(0xffE84479);
+  static const Color blackColor = Colors.black;
+  static const Color whiteColor = Colors.white;
 }
