@@ -44,10 +44,11 @@ class _WeightPageState extends State<WeightPage> {
             const Tagline(tagline: 'You can change it later'),
             const Spacer(),
             SizedBox(
-              width: 90,
+              width: MediaQuery.of(context).size.width * 0.39,
               child: TextFormField(
                 controller: weightController,
                 keyboardType: TextInputType.number,
+                // textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 40,
                 ),
@@ -75,7 +76,7 @@ class _WeightPageState extends State<WeightPage> {
                       ? null
                       : () {
                           // error cause if yyou don't use .setDouble() and double.parse()
-                          prefs?.setDouble(Constant.prefAge,
+                          prefs?.setDouble(Constant.prefWeight,
                               double.parse(weightController.text));
                           Navigator.pushNamed(context, RouteName.goals);
                         },
