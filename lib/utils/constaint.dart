@@ -8,7 +8,8 @@ class Constant {
   Constant._();
 
   static const prefDarkTheme = "fitflow_theme";
-  static const prefAge = "fitflow_age";
+  // static const prefAge = "fitflow_age";
+  static const int prefAge = 15;
   static const prefGender = "fitflow_gender";
   static const prefWeight = "fitflow_weight";
   static const prefGoal = "fitflow_goal";

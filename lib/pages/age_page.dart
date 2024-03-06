@@ -13,21 +13,31 @@ class AgePage extends StatefulWidget {
 }
 
 class _AgePageState extends State<AgePage> {
-  TextEditingController ageController = TextEditingController();
+  final TextEditingController ageController = TextEditingController();
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    ageController.dispose();
+  }
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    ageController.text = prefs?.getInt(Constant.prefAge).toString() ?? '20';
+    // this line ensure the we store the user input.
+    // this  line if the input is null then set the default age 20
+    ageController.text = (prefs?.getInt(Constant.prefAge.toString()) == null)
+        ? "17"
+        : prefs?.getInt(Constant.prefAge.toString()).toString() ?? '20';
+    // ageController.dispose();
   }
 
+// Todo : Fix bug
   @override
   Widget build(BuildContext context) {
-    return
-        // Todo:paste the about page code here.
-
-        Scaffold(
+    return Scaffold(
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.only(
@@ -44,7 +54,7 @@ class _AgePageState extends State<AgePage> {
                 tagline: 'This help us to create your personalized plan'),
             const Spacer(),
             SizedBox(
-              width: 150,
+              width: 105,
               child: TextFormField(
                 controller: ageController,
                 keyboardType: TextInputType.number,
@@ -55,7 +65,7 @@ class _AgePageState extends State<AgePage> {
                 decoration: const InputDecoration(
                     suffix: Text(
                   "years",
-                  style: TextStyle(fontSize: 30),
+                  style: TextStyle(fontSize: 20),
                 )),
               ),
             ),
@@ -74,8 +84,8 @@ class _AgePageState extends State<AgePage> {
                   onPressed: (ageController.text.isEmpty)
                       ? null
                       : () {
-                          prefs?.setInt(
-                              Constant.prefAge, int.parse(ageController.text));
+                          prefs?.setInt(Constant.prefAge.toString(),
+                              int.parse(ageController.text));
                           Navigator.pushNamed(context, RouteName.weight);
                         },
                   style: customButtonStlye(),
