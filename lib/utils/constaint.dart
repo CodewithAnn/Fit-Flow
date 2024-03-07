@@ -16,6 +16,19 @@ class Constant {
   static const prefUsername = "fitflow_username";
   static const prefWorkouts = "fitflow_workouts";
   static const prefNotification = "fitflow_notification";
+
+  static const goalsHeading = [
+    "Beginner",
+    "Irregular training",
+    "Medium",
+    "Advance"
+  ];
+  static const goalsTitle = [
+    "\n I want to start workout",
+    "\n i train 1-2 times of week.",
+    "\n i train 3-5 times of week",
+    "\n I train more than 5 times a week."
+  ];
 }
 
 class AppColor {

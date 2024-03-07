@@ -6,4 +6,5 @@ class RouteName {
   static const String age = "age_Route";
   static const String weight = "weight_Route";
   static const String goals = "goals_Route";
+  static const String username = "username_Route";
 }
