@@ -2,6 +2,7 @@ import 'package:fitflow/pages/about_page.dart';
 import 'package:fitflow/pages/age_page.dart';
 import 'package:fitflow/pages/dashboard_page.dart';
 import 'package:fitflow/pages/goals_page.dart';
+import 'package:fitflow/pages/home_page.dart';
 import 'package:fitflow/pages/on_Boarding.dart';
 import 'package:fitflow/pages/username_page.dart';
 import 'package:fitflow/pages/weight_page.dart';
@@ -39,6 +40,10 @@ class Routes {
       case RouteName.username:
         return MaterialPageRoute(
           builder: (context) => const UserNamePage(),
+        );
+      case RouteName.homepage:
+        return MaterialPageRoute(
+          builder: (context) => const HomePage(),
         );
 
       default:
